@@ -7,7 +7,9 @@ function App() {
      <div className="container my-3">  
      <Textform heading="Enter Text" />
      </div>
- 
+     
+
+     
     </>
   )
 }
