@@ -8,14 +8,29 @@ export default function Textform(props) {
         
     }
     const handleclick2=()=>{
-        console.log("upper case");
+        console.log("lower caser");
         let newtext=text.toLocaleLowerCase();
         setText(newtext)
         
     }
+    const handleclick3=()=>{
+        console.log("clear text");
+        let newtext=" ";
+        setText(newtext)
+        
+    }
+    const handleclick4 = () => {
+      console.log("select text");
+      const textBox = document.getElementById("mybox");
+      textBox.select();
+      const newtext = textBox.value;
+      console.log(newtext);
+      setText(newtext);
+    };
     const handleonchange=(event)=>{
        console.log("onchange");
        setText(event.target.value);
+
     }
     
      
@@ -27,6 +42,8 @@ export default function Textform(props) {
   <textarea className="form-control" onChange={handleonchange} value={text} id="mybox" rows="8"></textarea>
   <button className='btn btn-primary my-4' onClick={handleclick1}>Convert to upper case</button>
   <button className='btn btn-primary my-4 mx-4' onClick={handleclick2}>Convert to lower case</button>
+  <button className='btn btn-primary my-4 mx-4' onClick={handleclick3}>Clear Text</button>
+  <button className='btn btn-primary my-4 mx-4' onClick={handleclick4}>Select all Text</button>
 </div>
 
 <div className="container my-3">
